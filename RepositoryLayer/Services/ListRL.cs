@@ -41,7 +41,6 @@ namespace RepositoryLayer.Services
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -70,11 +69,11 @@ namespace RepositoryLayer.Services
             }
         }
 
-        public ListEntity UpdateList(ListEntity list)
+        public ListEntity UpdateList(ListModel list, int ListId)
         {
             try
             {
-                ListEntity result = context.ListTable.Where(e => e.ListId == list.ListId).FirstOrDefault();
+                ListEntity result = context.ListTable.Where(e => e.ListId == ListId).FirstOrDefault();
 
                 if (result != null)
                 {

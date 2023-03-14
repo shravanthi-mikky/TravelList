@@ -10,5 +10,12 @@ namespace BusinessLayer.Interfaces
     {
         public string Login(LoginModel userlogin);
         public UserEntity Registration(UserRegistrationModel user);
+
+        public bool Payment(PaymentModel payModel);
+
+        public List<PayButtonModel> RetrivePayButtonValues();
+        public PayButtonModel UpdatePay(PayButtonModel employ);
+
+        public List<PayButtonModel> RetrivePayButtonVal(int listId);
     }
 }

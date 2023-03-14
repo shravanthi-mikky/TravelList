@@ -41,5 +41,45 @@ namespace BusinessLayer.Services
                 throw ex;
             }
         }
+
+        public bool Payment(PaymentModel payModel)
+        {
+            return iUserRL.Payment(payModel);
+        }
+
+        public List<PayButtonModel> RetrivePayButtonValues()
+        {
+            try
+            {
+                return iUserRL.RetrivePayButtonValues();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<PayButtonModel> RetrivePayButtonVal(int listId)
+        {
+            try
+            {
+                return iUserRL.RetrivePayButtonVal(listId);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public PayButtonModel UpdatePay(PayButtonModel employ)
+        {
+            try
+            {
+                return iUserRL.UpdatePay(employ);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

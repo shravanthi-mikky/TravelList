@@ -1,0 +1,49 @@
+<body ng-controller="InvoiceController">
+    <div class="PaymentMainDiv">
+    <header class="modal-header">
+        <h3>PAYMENT GATEWAY</h3>
+    </header>
+    <div class="paymentBox">
+        <div class="wrapper">
+            <div class="payment">
+                <div class="payment-logo">
+                    <p>p</p>
+                </div>
+                <h2>Payment Gateway</h2>
+                <form name="form" novalidate>
+                    <p>Card holder:</p>
+                    <input type="text" class="inputBox" ng-model="cardHolder" placeholder="Name" ng-required="true" >
+                    
+                    <p>Card number:</p>
+                    <input type="text" class="inputBox" ng-model="cardNumber"  placeholder="Card Number" ng-required="true">
+                    <div class="card-grp space">
+                        <div class="card-item icon-relative" >
+                            <p>Expiry date:</p>
+                            <input type="text" name="expiry-data" ng-model="expiryDate" class="inputBox" 
+                                placeholder="00 / 00" ng-required="true" >
+                            <i class="far fa-calendar-alt"></i>
+                        </div>
+                        <div class="card-item icon-relative">
+                            <p>CVC:</p>
+                            <input type="text" class="inputBox" ng-model="cvv" placeholder="000" ng-required="true" >
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                    <div ng-init="result='Paid'">
+                        <input type="hidden" value="Paid" ng-model="result" >
+                    </div>
+
+                    <div class="btn" ng-click="PaymentDone(cardHolder,cardNumber,expiryDate,cvv,result)">
+                        Pay
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="InvoiceFooter payFooter">
+        Thankyou for your business
+    </footer>
+
+</div>
+</body>
