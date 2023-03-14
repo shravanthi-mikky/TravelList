@@ -16,5 +16,7 @@ namespace RepositoryLayer.TravelContext
 
         public DbSet<ListEntity> ListTable { get; set; }
 
+        public DbSet<MemberEntity> MemberTable { get; set; }
+
     }
 }

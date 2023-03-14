@@ -74,12 +74,12 @@ namespace TravelList1.Controllers
             }
         }
 
-        [HttpDelete("UpdateList")]
-        public IActionResult UpdateList(ListEntity list)
+        [HttpPut("UpdateList")]
+        public IActionResult UpdateList(ListModel list, int ListId)
         {
             try
             {
-                var reg = this.iListBL.UpdateList(list);
+                var reg = this.iListBL.UpdateList(list, ListId);
                 if (reg != null)
                 {
                     return this.Ok(new { Success = true, message = "List Updated Successfully" , data=reg});
@@ -94,5 +94,9 @@ namespace TravelList1.Controllers
                 return this.BadRequest(new { Success = false, message = ex.Message });
             }
         }
+
+        // PAYMENT CONTROLLER
+
+
     }
 }

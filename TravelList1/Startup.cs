@@ -47,6 +47,9 @@ namespace TravelList1
 
             services.AddTransient<IListRL, ListRL>();
             services.AddTransient<IListBL, ListBL>();
+
+            services.AddTransient<IMemberRL, MemberRL>();
+            services.AddTransient<IMemberBL, MemberBL>();
             //cors
 
             services.AddCors(options =>

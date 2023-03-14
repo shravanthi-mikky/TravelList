@@ -12,6 +12,6 @@ namespace BusinessLayer.Interfaces
         public bool DeleteList(long listId);
         public IEnumerable<ListEntity> GetAllList();
 
-        public ListEntity UpdateList(ListEntity list);
+        public ListEntity UpdateList(ListModel list, int ListId);
     }
 }

@@ -41,11 +41,11 @@ namespace BusinessLayer.Services
             }
         }
 
-        public ListEntity UpdateList(ListEntity list)
+        public ListEntity UpdateList(ListModel list, int ListId)
         {
             try
             {
-                return iListRL.UpdateList(list);
+                return iListRL.UpdateList(list, ListId);
             }
             catch (Exception ex)
             {

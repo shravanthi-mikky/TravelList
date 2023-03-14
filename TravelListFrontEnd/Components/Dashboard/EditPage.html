@@ -1,0 +1,34 @@
+<body>
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Edit Emp</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+        <input type="hidden" placeholder="listId" ng-model="listId" />
+        <div>
+            <div class="formgroup">
+                <input type="text" ng-model="place" class="formcontrol" placeholder="Enter Place">
+            </div>
+            <div class="formgroup">
+                <input type="text" ng-model="startDate" class="formcontrol" placeholder="Enter startdate">
+            </div>
+            <div class="formgroup">
+                <input type="text" ng-model="endDate" class="formcontrol" placeholder="Enter endDate">
+            </div>
+            <div class="formgroup">
+                <input type="text" ng-model="duration" class="formcontrol" placeholder="Enter Duration">
+            </div>
+            <div class="formgroup">
+                <input type="text" ng-model="cost" class="formcontrol" placeholder="Enter cost">
+            </div>
+            <div class="formgroup">
+                <input type="text" ng-model="members" class="formcontrol" placeholder="Enter members">
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer" style="background: #eee;">
+        <button class="btn " type="button" ng-click="cancelModal()">Cancel</button>
+        <button class="btn" type="button" ng-controller="DashboardCtrl"
+            ng-click="UpdateEmploy(listId,place,startDate,endDate,duration,cost,members)">Ok</button>
+
+    </div>
+</body>

@@ -1,0 +1,37 @@
+<body >
+    <div ng-controller="InvoiceController" ng-init="GetMembers()" id="InvoiceDetails">
+        <div class="modal-header">
+            <img class='TravelLogo' ng-class="myVar" id="griddata" src='../../Images/Travel-Logo-Ideas.png' alt="Google"  width='90' ></img>
+            <h3 class="modal-title InvoiceTitle" id="modal-title">Details Of Members</h3>
+        </div>
+        <div class="card cardMain" >
+
+            <div ng-repeat="Member in MembersArray">
+                <p>* FullName : {{Member.fullName}}</p>
+                <p>* Gender : {{Member.gender}}</p>
+                <p>* Residence : {{Member.residence}}</p>
+                <p>* Age : {{Member.age}}</p>
+                <p>* Place : {{Member.place}}</p>
+                <p>-----------------------------------</p>
+            </div>
+            <div class="PaymentDiv">
+                <h3>Amount : <span id="demo"></span>/-</h3>
+            </div>
+            <script>
+                document.getElementById("demo").innerHTML = localStorage.getItem("cost");
+            </script>
+            <div class="Buttons">
+                <div class='Child' id="setbtn" ng-click="myVar='my-class'">
+                    <Button class="Next" data-html2canvas-ignore="true" ng-click="ExportAsPdf()" type="submit">Getpdf</Button>
+                </div>
+                <div class='Child'  ng-click="myVar='my-class'">
+                    <Button class="Next" data-html2canvas-ignore="true" ng-click="MakePayment()" type="submit">Pay</Button>
+                </div>
+            </div>
+           
+        </div>
+        <footer class="InvoiceFooter">
+            <h3 class="modal-title InvoiceTitle">THANK YOU</h3 >
+        </footer>
+    </div>
+</body>

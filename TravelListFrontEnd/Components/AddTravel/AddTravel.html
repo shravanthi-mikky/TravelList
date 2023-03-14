@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="TravelListApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/Components/AddTravel/AddTravel.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="../../ngStorage.js"></script>
+</head>
+
+<body>
+    <div class="header">
+       <!--  <img class="LogoClass" src="../../Images/logo.jpg" height='40' width="40"> -->
+        <p class="employHeading">EMPLOY PAYROLL</p>
+        <!-- <img class="AccountClass" src="../../Images/Accounts.png" height='40' width="40"> -->
+    </div>
+    <div class="MainPage">
+        <div class='headerOfEmpPage' ng-controller="DashboardCtrl">
+
+            <div class="HeadingDetails">Employee Details</div>
+            <form class="FormSection">
+                <div class="EachColumn">
+                    <label>Place</label>
+                    <input class="EmpData" ng-model="place">
+                </div>
+                <div class="EachColumn">
+                    <label>StartDate</label>
+                    <input class="EmpData" ng-model="startDate">
+                </div>
+                <div class="EachColumn">
+                    <label>EndDate</label>
+                    <input class="EmpData" ng-model="endDate">
+                </div>
+                <div class="EachColumn">
+                    <label>Duration</label>
+                    <input class="EmpData" ng-model="duration">
+                </div>
+
+                <div class="EachColumn">
+                    <label>Cost</label>
+                    <input class="EmpData" ng-model="cost">
+                </div>
+                <div class="EachColumn">
+                    <label>Members</label>
+                    <input class="EmpData" ng-model="members">
+                </div>
+
+                <div class="FormButtons">
+                    <Button class="Next3" type="submit" ng-click="ReturnToHome()">Cancel</Button>
+                    <Button class="Next3" type="submit" ng-click="AddEmploy(place,startDate,endDate,duration,cost,members)">Submit</Button>
+                    <Button class="Next3" type="submit" ng-click="">Reset</Button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
